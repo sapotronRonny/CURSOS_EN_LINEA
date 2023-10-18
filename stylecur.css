@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: auto;
+    background-color: #00AFF0;
+}
+header {
+    background-color: #00AFF0; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interno del encabezado */
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: space-between; /* Alinear elementos en el encabezado */
+    height: 3vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra debajo del botón */
+}
+
+/* Estilos para el logotipo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px; /* Ancho de la imagen del logotipo */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-right: 10px; /* Espaciado a la derecha de la imagen */
+    cursor: pointer; /* Cambiar el cursor al hacer clic en la imagen */
+}
+
+/* Estilos para los botones */
+.botones {
+    display: flex; /* Mostrar botones en línea */
+    align-items: center; /* Alinear botones verticalmente al centro */
+    
+}
+
+.boton {
+    background-color: #00AFF0; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px; /* Espaciado interno del botón */
+    margin-left: 10px; /* Espaciado entre botones */
+    cursor: pointer;
+    font-family: 'Fira Code', monospace;
+}
+
+.boton + .boton {
+    border-left: 1px solid #fff; /* Línea entre botones */
+}
+
+.contenedor {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.bloque {
+    width: calc(33.33% - 10px);
+    background-color: #f1f1f1;
+    border: 0px solid #ccc;
+    padding: 10px;
+}
+
+.imagen {
+    max-width: 100%;
+    max-height: auto;
+    display: block;
+    transition: filter 0.3s;
+}
+
+.imagen:hover {
+    filter: brightness(70%);
+}
+
+.titulo {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+}
+
+.contenedor .boton {
+    display: none;
+    background-color: #00AFF0;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-family: 'Fira Code', monospace;
+}
+
+.imagen:hover + .titulo .boton {
+    display: block;
+}
+
+.footer {
+    height: 300px;
+    background-color: #00AFF0; /* Color de fondo del footer */
+    padding: 10px;
+}
+
+.logotipo {
+    float: left;
+    width: 30%; /* Tamaño del logotipo grande */
+    padding: 10px; /* Espaciado alrededor del logotipo */
+}
+
+.imagenes-pequenas {
+    float: right;
+    width: 2%; /* Tamaño de cada imagen pequeña */
+    margin-right: 2%; /* Espacio entre las imágenes pequeñas */
+}
+
+.clear {
+    clear: both; /* Limpia los flotantes */
+}

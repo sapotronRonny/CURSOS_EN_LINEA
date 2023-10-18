@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SIGN UP</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="stylelog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family>Fira+Code&display=swap" rel="stylesheet">
+    <script src='scriptre.js'></script>
+
+    <script>
+        function validarFormulario() {
+            // Validar el campo de correo electrónico
+            var correoInput = document.getElementById("correo");
+            var correoValor = correoInput.value;
+            var correoPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            if (!correoPattern.test(correoValor)) {
+                alert("El campo de correo debe tener una dirección de correo electrónico válida.");
+                correoInput.focus();
+                return false;
+            }
+
+            // Verificar que el correo sea el específico que deseas
+            if (correoValor !== "correo@miempresa.com") {
+                alert("Correo no registrado");
+                correoInput.focus();
+                return false;
+            }
+
+            // Validar el campo de contraseña
+            var contrasenaInput = document.getElementById("contrasena");
+            var contrasenaValor = contrasenaInput.value;
+
+            if (contrasenaValor === "") {
+                alert("Debes ingresar una contraseña.");
+                contrasenaInput.focus();
+                return false;
+            }
+
+            // Verificar que la contraseña sea la específica que deseas
+            if (contrasenaValor !== "s83ronnicho") {
+                alert("Contraseña no registrada");
+                contrasenaInput.focus();
+                return false;
+            }
+
+            // Si todas las validaciones son exitosas, el formulario se enviará
+            return true;
+        }
+    </script>
+    
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagenes/LOGO-ULEAM-HORIZONTAL.png" alt="Logo de la empresa">
+            </a>
+        </div>
+        <div class="botones">
+            <button id="miscursos" class="boton">MIS CURSOS</button>
+            <button id="cursos" class="boton">CURSOS</button>
+            <button id="registro" class="boton">SIGN UP</button>
+            <button id="login" class="boton">SIGN IN</button>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById("miscursos").addEventListener("click", function () {
+            // Redirigir a la página deseada
+            window.location.href = "miscursos.html";
+        });
+
+        document.getElementById("cursos").addEventListener("click", function () {
+            // Redirigir a la página deseada
+            window.location.href = "cursos.html";
+        });
+
+        document.getElementById("registro").addEventListener("click", function () {
+            // Redirigir a la página deseada
+            window.location.href = "registro.html";
+        });
+
+        document.getElementById("login").addEventListener("click", function () {
+            // Redirigir a la página deseada
+            window.location.href = "login.html";
+        });
+    </script>
+
+    <div class="cuadro" ALIGN="CENTER">
+        <section class="formulario" ALIGN="CENTER">
+            <h2 style="color: #00aff0; text-shadow: 1px 1px 2px black;">SIGN IN</h2><br>
+            <form id="miformulario" action="miscursos.html" style="font-family: 'Raleway', sans-serif;" action="procesar.php" method="post" onsubmit="return validarFormulario()">
+                <label for="correo">Correo:</label><br>
+                <input type="email" id="correo" name="correo" required>
+                <br><br>
+    
+                <label for="contrasena">Contraseña:</label><br>
+                <input type="password" id="contrasena" name="contrasena" required>
+                <br><br>
+    
+                <input src="registro.html" type="submit" value="Enviar">
+            </form>
+        </section>
+    </div>
+
+
+</body>
+</html>

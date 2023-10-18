@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SIGN UP</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="styleregis.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family>Fira+Code&display=swap" rel="stylesheet">
+    <script src='scriptre.js'></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagenes/LOGO-ULEAM-HORIZONTAL.png" alt="Logo de la empresa">
+            </a>
+        </div>
+        <div class="botones">
+            <button id="miscursos" class="boton">MIS CURSOS</button>
+            <button id="cursos" class="boton">CURSOS</button>
+            <button id="registro" class="boton">SIGN UP</button>
+            <button id="login" class="boton">SIGN IN</button>
+        </div>
+    </header>
+
+    <script>
+        // Agregar un evento de clic al botón
+        document.getElementById("miscursos").addEventListener("click", function () {
+            // Redirigir a la página deseada
+            window.location.href = "miscursos.html";
+        });
+
+        document.getElementById("cursos").addEventListener("click", function () {
+            // Redirigir a la página deseada
+            window.location.href = "cursos.html";
+        });
+
+        document.getElementById("registro").addEventListener("click", function () {
+            // Redirigir a la página deseada
+            window.location.href = "registro.html";
+        });
+
+        document.getElementById("login").addEventListener("click", function () {
+            // Redirigir a la página deseada
+            window.location.href = "login.html";
+        });
+    </script>
+
+    <div class="cuadro" ALIGN="CENTER">
+        <section class="formulario" ALIGN="CENTER">
+            <h2 style="color: rgb(208, 152, 56); text-shadow: 1px 1px 2px black;"></h2><br>
+            <form id="miformulario" action="login.html" style="font-family: 'Raleway', sans-serif;" action="procesar.php" method="post" onsubmit="return validarFormulario1()">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required>
+                <br><br>
+
+                <label for="apellido" style="text-align: center;">Apellidos:</label><br>
+                <input type="text" id="apellido" name="apellido" required>
+                <br><br>
+
+                <label for="correo">Correo Electrónico:</label><br>
+                <input type="email" id="correo" name="correo" required>
+                <br><br>
+
+                <label for="contrasena">Contraseña:</label><br>
+                <input type="password" id="contrasena" name="contrasena" required>
+                <br><br>
+
+                <label for="nacimiento" style="text-align: center;">Fecha de nacimiento:</label><br>
+                <input type="date" id="nacimiento" name="nacimiento" required>
+                <br><br>
+
+                <label for="cedula" style="text-align: center;">Cedula:</label><br>
+                <input type="number" id="cedula" name="cedula" required>
+                <br><br>
+
+                <label for="telefono" style="text-align: center;">Número de teléfono:</label><br>
+                <input type="number" id="telefono" name="telefono" required>
+                <br><br>
+
+                <label for="ciudad" style="text-align: center;">Ciudad:</label><br>
+                <input type="text" id="ciudad" name="ciudad" required>
+                <br><br>
+
+                <label for="direccion" style="text-align: center;">Dirección:</label><br>
+                <input type="text" id="direccion" name="direccion" required>
+                <br><br>
+
+                <label for="curso">Curso:</label><br>
+                <select style="font-family: 'Raleway', sans-serif;" id="curso" name="curso" onchange="mostrarCamposAdicionales()">
+                <option value="">Escoje una opción</option>
+                <option value="soltero">Soltero</option>
+                <option value="casado">Casado</option>
+                <option value="casado">viudo</option>
+                <option value="casado">divorciado</option>
+                </select>
+                <br><br>
+
+        <div id="camposAdicionales" style="display: none;">
+            <!-- Campos adicionales que se mostrarán cuando se seleccione "casado" -->
+            <label for="conyuge">Nombre del cónyuge:</label><br>
+            <input type="text" id="conyuge" name="conyuge" required>
+            <br><br>
+
+            <label for="hijos">Número de hijos:</label><br>
+            <input type="number" id="hijos" name="hijos" required>
+            <br><br>
+        </div>
+
+        <input type="submit" id="enviar" value="Enviar">
+                <a></a>
+                <p id="mensajeError" style="color: red;"></p><br>
+            </form>
+
+            <img id="Imagen" src="" alt="Imagen" style="display: none;">
+        </section>
+    </div>
